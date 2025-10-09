@@ -1,313 +1,402 @@
-import Head from "next/head";
+import React from 'react';
 
-export default function CodePage() {
+export default function HomePage() {
   return (
-    <>
-      <Head>
-        <meta charSet="utf-8" />
-        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-        <title>Election Candidate Homepage</title>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
-          rel="stylesheet"
-        />
-        <style>{`
-          .material-symbols-outlined {
-            font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
-          }
-          body {
-            min-height: max(884px, 100dvh);
-          }
-        `}</style>
-      </Head>
-      <div className="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
-        <div className="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
-          {/* Hero Section */}
-          <div className="@container">
-            <div className="@[480px]:p-4">
-              <div
-                className="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-4"
-                data-alt="Energetic, youth-focused image with Islamic cultural essence"
-                style={{
-                  backgroundImage:
-                    "linear-gradient(rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.5) 100%), url('https://lh3.googleusercontent.com/aida-public/AB6AXuCqMXR2pnaOEH_g6y8MNYHNGsY7EhU38rZ9cK2sNK9eOeC-BcnbAwQTAzlbVoXmSF1-K_h7tWzNRgFldHWtkc1-NraKrJZiAbVAObR6SzBjOhjIGRtY0ApesujdfzXhJbYhaCtYieVggWdRdi_QlBFvPWPQHT-lqa06su6W0wi33t4ajmbv82LKyo4QTe8EGfLamNqfsDylMHDT1quKsLO2BIHW2Tk_ROrk7ZzsW-sjW0cP8PVtfEEfQyBpal_qqUz6qrfh7GID32pC')",
-                }}
-              >
-                <div className="flex flex-col gap-2 text-center">
-                  <h1 className="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl">
-                    A Brighter Future, Together.
-                  </h1>
-                  <h2 className="text-white text-base font-normal leading-normal @[480px]:text-lg">
-                    Join a new generation of leaders committed to progress and unity.
-                  </h2>
-                </div>
-                <button className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-5 bg-accent text-text-light text-base font-bold leading-normal tracking-[0.015em]">
-                  <span className="truncate">Join the Movement</span>
-                </button>
-              </div>
-            </div>
-          </div>
-          {/* Commitment Section */}
+    <div
+      className="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden"
+    >
+      <div className="@container">
+        <div className="@[480px]:p-4">
           <div
-            className="flex flex-col gap-10 px-4 py-10 @container bg-background-light dark:bg-background-dark"
+            className="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-4"
+            data-alt="Energetic, youth-focused image with Islamic cultural essence"
             style={{
-              backgroundImage:
-                "url('https://lh3.googleusercontent.com/aida-public/AB6AXuCXIQe8bHTBwBMN0UimZ_sIMN3FtLzVpVww3fasWs_SSkd9pJMOxYCpPs0Ga04FbxQAbx5fVrPsE8XGU7L2v4g6apeUjtV52MpLqIx9Nxlffke0mT9LrI5uayvA7NDskvXgwo6t_PcbEvf_Q56AumXCLUwd--DqVCaw7CTNRb6sAoROhrZh8cuffQFegUvTYPQ0KmYcuRAE3CyLYa1Fy3EkNO0axKRpaHpSuupGENT_jzPlxCxYwUgOC6tyAmLOHqzlUaz8hOSD0phf')",
-              backgroundRepeat: "repeat",
-              backgroundAttachment: "fixed",
-              backgroundPosition: "center",
-              backgroundSize: "500px",
-              backgroundBlendMode: "overlay",
-              opacity: 0.8,
+              backgroundImage: `linear-gradient(
+                  rgba(0, 0, 0, 0.2) 0%,
+                  rgba(0, 0, 0, 0.5) 100%
+                ),
+                url('https://lh3.googleusercontent.com/aida-public/AB6AXuCqMXR2pnaOEH_g6y8MNYHNGsY7EhU38rZ9cK2sNK9eOeC-BcnbAwQTAzlbVoXmSF1-K_h7tWzNRgFldHWtkc1-NraKrJZiAbVAObR6SzBjOhjIGRtY0ApesujdfzXhJbYhaCtYieVggWdRdi_QlBFvPWPQHT-lqa06su6W0wi33t4ajmbv82LKyo4QTe8EGfLamNqfsDylMHDT1quKsLO2BIHW2Tk_ROrk7ZzsW-sjW0cP8PVtfEEfQyBpal_qqUz6qrfh7GID32pC')`,
             }}
           >
-            <div className="flex flex-col gap-6">
-              <div className="flex flex-col gap-4">
-                <h1 className="text-text-light dark:text-text-dark tracking-light text-[32px] font-bold leading-tight @[480px]:text-4xl @[480px]:font-black max-w-[720px]">
-                  Our Commitment to You
-                </h1>
-                <p className="text-text-light dark:text-text-dark text-base font-normal leading-normal max-w-[720px]">
-                  We are dedicated to building a stronger, more prosperous community for all. Our vision is rooted in empowering our youth, fostering economic growth, and strengthening community bonds.
-                </p>
-              </div>
-              <button className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-5 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] w-fit">
-                <span className="truncate">Learn More</span>
-              </button>
-            </div>
-            <div className="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-4 p-0">
-              <div className="flex flex-1 gap-3 rounded-lg border border-[#dbe6df] dark:border-gray-700 bg-background-light dark:bg-background-dark/80 p-4 flex-col">
-                <span className="material-symbols-outlined text-primary text-3xl">school</span>
-                <div className="flex flex-col gap-1">
-                  <h2 className="text-text-light dark:text-text-dark text-base font-bold leading-tight">
-                    Youth Empowerment
-                  </h2>
-                  <p className="text-gray-600 dark:text-gray-300 text-sm font-normal leading-normal">
-                    Investing in our youth is investing in our future. We'll create more opportunities for education and employment.
-                  </p>
-                </div>
-              </div>
-              <div className="flex flex-1 gap-3 rounded-lg border border-[#dbe6df] dark:border-gray-700 bg-background-light dark:bg-background-dark/80 p-4 flex-col">
-                <span className="material-symbols-outlined text-primary text-3xl">trending_up</span>
-                <div className="flex flex-col gap-1">
-                  <h2 className="text-text-light dark:text-text-dark text-base font-bold leading-tight">
-                    Economic Growth
-                  </h2>
-                  <p className="text-gray-600 dark:text-gray-300 text-sm font-normal leading-normal">
-                    A thriving economy benefits everyone. We'll support local businesses and attract new investments.
-                  </p>
-                </div>
-              </div>
-              <div className="flex flex-1 gap-3 rounded-lg border border-[#dbe6df] dark:border-gray-700 bg-background-light dark:bg-background-dark/80 p-4 flex-col">
-                <span className="material-symbols-outlined text-primary text-3xl">groups</span>
-                <div className="flex flex-col gap-1">
-                  <h2 className="text-text-light dark:text-text-dark text-base font-bold leading-tight">
-                    Community Development
-                  </h2>
-                  <p className="text-gray-600 dark:text-gray-300 text-sm font-normal leading-normal">
-                    Strong communities are built on trust. We'll work to bring people together and foster collaboration.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* Candidate Section */}
-          <div className="py-10 bg-background-light dark:bg-background-dark">
-            <div className="container mx-auto px-4">
-              <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-                <div className="w-full md:w-1/2 relative group">
-                  <img
-                    alt="High-quality portrait of a smiling male candidate in his late 20s, with a subtle Islamic geometric pattern overlay."
-                    className="rounded-xl shadow-lg w-full h-auto object-cover aspect-[4/5] transition-all duration-300 group-hover:scale-105 group-hover:shadow-2xl group-hover:shadow-primary/50"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfFObrIg8DyhclLE6zfyClKqrcciMZotB5gMj3a-mWbUlGGb92wccIOrrR4HSMWxYxE__dtY2jowUDfWByaJJYrMj9uT2CTnXIIqGD6LZjWY3HeiEY2xD1gLZzvnbrvgr2lWdzLDH2iRtebbGCNvgrgQk6Z7vvWeAtcspfUbAWF5uMm9-mZ8_ghU79Dk5MAAxNm0Ia8LPAdClPhvQQRREfaGImjx9LYvEGUrNhgthIFbkw5C5E0NB_wMMTdrK7YyGxKoZ8Fxj0Nrui"
-                  />
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 rounded-b-xl transition-opacity duration-300 group-hover:opacity-0">
-                    <p className="text-white text-lg italic leading-tight">
-                      "For a future built on faith, community, and progress."
-                    </p>
-                  </div>
-                </div>
-                <div className="w-full md:w-1/2 text-center md:text-left">
-                  <h2 className="text-3xl md:text-4xl font-bold text-text-light dark:text-text-dark mb-4">
-                    Meet Your Candidate
-                  </h2>
-                  <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
-                    A passionate advocate for progress, dedicated to serving our community with integrity and a fresh perspective. Our candidate is ready to lead us toward a brighter future.
-                  </p>
-                  <button className="flex min-w-[84px] mx-auto md:mx-0 max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-5 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] w-fit">
-                    <span className="truncate">Discover My Story</span>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* Policies Section */}
-          <div className="border-t border-gray-200 dark:border-gray-700 pt-10 pb-4">
-            <h2 className="text-text-light dark:text-text-dark text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3">
-              Our Policies
-            </h2>
-            <div className="px-4 flex flex-col gap-4">
-              <div className="border border-gray-200 dark:border-gray-700 rounded-lg p-4">
-                <h3 className="font-bold text-lg text-primary">Education for All</h3>
-                <p className="text-gray-600 dark:text-gray-300 mt-1">
-                  We will work to ensure every child has access to quality education, from early childhood to higher learning.
-                </p>
-              </div>
-              <div className="border border-gray-200 dark:border-gray-700 rounded-lg p-4">
-                <h3 className="font-bold text-lg text-primary">Healthcare Reform</h3>
-                <p className="text-gray-600 dark:text-gray-300 mt-1">
-                  Affordable and accessible healthcare is a right, not a privilege. We will expand coverage and lower costs.
-                </p>
-              </div>
-              <div className="border border-gray-200 dark:border-gray-700 rounded-lg p-4">
-                <h3 className="font-bold text-lg text-primary">Environmental Protection</h3>
-                <p className="text-gray-600 dark:text-gray-300 mt-1">
-                  We will take bold action to combat climate change and protect our natural resources for future generations.
-                </p>
-              </div>
-            </div>
-          </div>
-          {/* Events Section */}
-          <div className="border-t border-gray-200 dark:border-gray-700 pt-10">
-            <h2 className="text-text-light dark:text-text-dark text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3">
-              Upcoming Events
-            </h2>
-            <div className="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-              <div className="flex items-stretch p-4 gap-4">
-                {/* Event 1 */}
-                <div className="flex h-full flex-1 flex-col gap-4 rounded-xl bg-background-light dark:bg-background-dark/80 shadow-[0_0_4px_rgba(0,0,0,0.1)] min-w-64 border border-gray-200 dark:border-gray-700">
-                  <div
-                    className="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-t-xl flex flex-col"
-                    data-alt="Town hall meeting with community members"
-                    style={{
-                      backgroundImage:
-                        "url('https://lh3.googleusercontent.com/aida-public/AB6AXuAa-Nkf9MqLCM3u5Pp9D2uY5AZ0HeGuI3-OxUH0AbPEwI1S5KYBl75vKgpGDnclDyJRDmaxHkaLia2tMYa9l_J1RVHbwvcd8XnRu11s4ypRti3sgl4Lnip7DNqMIeyeoyK3w_jm7asU9b_UKH4b2rwsb7X7b6ksitmc5J8RhENMtZlRDFtMeEeKEVRjS_YCkTUrS1CZf8eQsrtrMf1tyKa7uk_gjx24logkPF-g3w1aiJj9BnoCnLJQkbzuTf79CTNA5-QyLLiQMFkr')",
-                    }}
-                  ></div>
-                  <div className="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
-                    <div>
-                      <p className="text-text-light dark:text-text-dark text-base font-bold leading-normal">
-                        Town Hall Meeting
-                      </p>
-                      <p className="text-gray-600 dark:text-gray-300 text-sm font-normal leading-normal">
-                        Join us for a discussion on the future of our city. (Sat, Oct 26, 7:00 PM)
-                      </p>
-                    </div>
-                    <button className="flex min-w-[84px] w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/20 dark:bg-primary/30 text-primary font-bold leading-normal tracking-[0.015em] text-sm">
-                      <span className="truncate">Register</span>
-                    </button>
-                  </div>
-                </div>
-                {/* Event 2 */}
-                <div className="flex h-full flex-1 flex-col gap-4 rounded-xl bg-background-light dark:bg-background-dark/80 shadow-[0_0_4px_rgba(0,0,0,0.1)] min-w-64 border border-gray-200 dark:border-gray-700">
-                  <div
-                    className="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-t-xl flex flex-col"
-                    data-alt="Rally for change with many supporters"
-                    style={{
-                      backgroundImage:
-                        "url('https://lh3.googleusercontent.com/aida-public/AB6AXuCS6H01LGDGLhHIuTMiSktwL8GqMDTLBZye-F9w49sJE9WfBexIG5gcbc1ItvGq3vMAqg8IQJqAZvOYQG5sHTQmeHVZRFHBZu1a13a1E_oTyDvYxvvCrppoARXz72eo-cpPcmDHLlzJzfcZsUYjSshq22DDwRKY5tmY_rAjllsAt-MHBr_ua-VH8JrN95HUpav-0hlDs1pdlH9Pp8O2Ug27J87o3DKvlrHoYIxxn3BMKqyT-764rTxyvP17lsqB3sSWadnGf0aoygwT')",
-                    }}
-                  ></div>
-                  <div className="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
-                    <div>
-                      <p className="text-text-light dark:text-text-dark text-base font-bold leading-normal">
-                        Rally for Change
-                      </p>
-                      <p className="text-gray-600 dark:text-gray-300 text-sm font-normal leading-normal">
-                        Show your support and hear our vision for a better tomorrow. (Wed, Oct 30, 6:00 PM)
-                      </p>
-                    </div>
-                    <button className="flex min-w-[84px] w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/20 dark:bg-primary/30 text-primary font-bold leading-normal tracking-[0.015em] text-sm">
-                      <span className="truncate">Register</span>
-                    </button>
-                  </div>
-                </div>
-                {/* Event 3 */}
-                <div className="flex h-full flex-1 flex-col gap-4 rounded-xl bg-background-light dark:bg-background-dark/80 shadow-[0_0_4px_rgba(0,0,0,0.1)] min-w-64 border border-gray-200 dark:border-gray-700">
-                  <div
-                    className="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-t-xl flex flex-col"
-                    data-alt="Community BBQ with diverse group of people"
-                    style={{
-                      backgroundImage:
-                        "url('https://lh3.googleusercontent.com/aida-public/AB6AXuA50yWxvIvGRtAf5IXjzme6ulNYr6R5YwU8l3s2qmSKb2wg3yeT9z2fuxmUUdAQdUbHzMGGJPEojyadF7cVw40XDMlAQLEcuW_XaWJQLqk5h_QOyruce4TpZf1kSPw7y_iChoOnlwLfsclDM07XQnM_FQ7EEdFOpC_-IzBZl1_O9DOcSnU2y-y20_hZ6Ph8uiGoifI-QhnUwKBmxhz_M-4pOzEV_O6d3OluvuCwUDKvHU_hPfXuPc065CEFRX5M0aTjhnQ3UIo1Gnth')",
-                    }}
-                  ></div>
-                  <div className="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
-                    <div>
-                      <p className="text-text-light dark:text-text-dark text-base font-bold leading-normal">
-                        Community BBQ
-                      </p>
-                      <p className="text-gray-600 dark:text-gray-300 text-sm font-normal leading-normal">
-                        Let's connect over great food and conversation. (Sat, Nov 2, 12:00 PM)
-                      </p>
-                    </div>
-                    <button className="flex min-w-[84px] w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/20 dark:bg-primary/30 text-primary font-bold leading-normal tracking-[0.015em] text-sm">
-                      <span className="truncate">Register</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* Get Involved Section */}
-          <div className="px-4 py-10 bg-background-light dark:bg-background-dark border-t border-gray-200 dark:border-gray-700 mt-10">
-            <div className="bg-primary/10 dark:bg-primary/20 p-8 rounded-xl flex flex-col items-center gap-6 text-center">
-              <h2 className="text-text-light dark:text-text-dark text-2xl font-bold">
-                Get Involved
+            <div className="flex flex-col gap-2 text-center">
+              <h1
+                className="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl"
+              >
+                A Brighter Future, Together.
+              </h1>
+              <h2
+                className="text-white text-base font-normal leading-normal @[480px]:text-lg"
+              >
+                Join a new generation of leaders committed to progress and
+                unity.
               </h2>
-              <p className="text-gray-700 dark:text-gray-300 max-w-md">
-                Be part of the change. Sign up for our newsletter to stay updated or volunteer to make a direct impact.
-              </p>
-              <form className="w-full max-w-sm flex flex-col gap-4">
-                <input
-                  className="w-full h-12 px-4 rounded-lg border-gray-300 dark:border-gray-600 bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark focus:ring-primary focus:border-primary"
-                  placeholder="Enter your email"
-                  type="email"
-                />
-                <button
-                  className="w-full h-12 rounded-lg bg-primary text-white font-bold tracking-wide"
-                  type="submit"
-                >
-                  Subscribe
-                </button>
-                <button
-                  className="w-full h-12 rounded-lg bg-accent text-text-light font-bold tracking-wide"
-                  type="button"
-                >
-                  Volunteer
-                </button>
-              </form>
             </div>
+            <button
+              className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-5 bg-accent text-text-light text-base font-bold leading-normal tracking-[0.015em]"
+            >
+              <span className="truncate">Join the Movement</span>
+            </button>
           </div>
-          {/* Footer */}
-          <footer className="bg-background-light dark:bg-background-dark border-t border-gray-200 dark:border-gray-700 mt-10">
-            <div className="container mx-auto px-4 py-8">
-              <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-                <p className="text-sm text-gray-600 dark:text-gray-400">
-                  © 2024 Candidate Name. All rights reserved.
-                </p>
-                <div className="flex gap-4">
-                  <a className="text-gray-600 dark:text-gray-400 hover:text-primary" href="#">
-                    Facebook
-                  </a>
-                  <a className="text-gray-600 dark:text-gray-400 hover:text-primary" href="#">
-                    Twitter
-                  </a>
-                  <a className="text-gray-600 dark:text-gray-400 hover:text-primary" href="#">
-                    Instagram
-                  </a>
-                </div>
-                <a className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary" href="#">
-                  Privacy Policy
-                </a>
-              </div>
-            </div>
-          </footer>
         </div>
       </div>
-    </>
+
+      <div
+        className="flex flex-col gap-10 px-4 py-10 @container bg-background-light dark:bg-background-dark"
+        style={{
+          backgroundImage: `url('https://lh3.googleusercontent.com/aida-public/AB6AXuCXIQe8bHTBwBMN0UimZ_sIMN3FtLzVpVww3fasWs_SSkd9pJMOxYCpPs0Ga04FbxQAbx5fVrPsE8XGU7L2v4g6apeUjtV52MpLqIx9Nxlffke0mT9LrI5uayvA7NDskvXgwo6t_PcbEvf_Q56AumXCLUwd--DqVCaw7CTNRb6sAoROhrZh8cuffQFegUvTYPQ0KmYcuRAE3CyLYa1Fy3EkNO0axKRpaHpSuupGENT_jzPlxCxYwUgOC6tyAmLOHqzlUaz8hOSD0phf')`,
+          backgroundRepeat: 'repeat',
+          backgroundAttachment: 'fixed',
+          backgroundPosition: 'center',
+          backgroundSize: '500px',
+          backgroundBlendMode: 'overlay',
+          opacity: 0.8,
+        }}
+      >
+        <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-4">
+            <h1
+              className="text-text-light dark:text-text-dark tracking-light text-[32px] font-bold leading-tight @[480px]:text-4xl @[480px]:font-black max-w-[720px]"
+            >
+              Our Commitment to You
+            </h1>
+            <p
+              className="text-text-light dark:text-text-dark text-base font-normal leading-normal max-w-[720px]"
+            >
+              We are dedicated to building a stronger, more prosperous community
+              for all. Our vision is rooted in empowering our youth, fostering
+              economic growth, and strengthening community bonds.
+            </p>
+          </div>
+          <button
+            className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-5 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] w-fit"
+          >
+            <span className="truncate">Learn More</span>
+          </button>
+        </div>
+        <div
+          className="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-4 p-0"
+        >
+          <div
+            className="flex flex-1 gap-3 rounded-lg border border-[#dbe6df] dark:border-gray-700 bg-background-light dark:bg-background-dark/80 p-4 flex-col"
+          >
+            <span className="material-symbols-outlined text-primary text-3xl"
+            >school</span
+            >
+            <div className="flex flex-col gap-1">
+              <h2
+                className="text-text-light dark:text-text-dark text-base font-bold leading-tight"
+              >
+                Youth Empowerment
+              </h2>
+              <p
+                className="text-gray-600 dark:text-gray-300 text-sm font-normal leading-normal"
+              >
+                Investing in our youth is investing in our future. We'll create
+                more opportunities for education and employment.
+              </p>
+            </div>
+          </div>
+          <div
+            className="flex flex-1 gap-3 rounded-lg border border-[#dbe6df] dark:border-gray-700 bg-background-light dark:bg-background-dark/80 p-4 flex-col"
+          >
+            <span className="material-symbols-outlined text-primary text-3xl"
+            >trending_up</span
+            >
+            <div className="flex flex-col gap-1">
+              <h2
+                className="text-text-light dark:text-text-dark text-base font-bold leading-tight"
+              >
+                Economic Growth
+              </h2>
+              <p
+                className="text-gray-600 dark:text-gray-300 text-sm font-normal leading-normal"
+              >
+                A thriving economy benefits everyone. We'll support local
+                businesses and attract new investments.
+              </p>
+            </div>
+          </div>
+          <div
+            className="flex flex-1 gap-3 rounded-lg border border-[#dbe6df] dark:border-gray-700 bg-background-light dark:bg-background-dark/80 p-4 flex-col"
+          >
+            <span className="material-symbols-outlined text-primary text-3xl"
+            >groups</span
+            >
+            <div className="flex flex-col gap-1">
+              <h2
+                className="text-text-light dark:text-text-dark text-base font-bold leading-tight"
+              >
+                Community Development
+              </h2>
+              <p
+                className="text-gray-600 dark:text-gray-300 text-sm font-normal leading-normal"
+              >
+                Strong communities are built on trust. We'll work to bring
+                people together and foster collaboration.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="py-10 bg-background-light dark:bg-background-dark">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+            <div className="w-full md:w-1/2 relative group">
+              <img
+                alt="High-quality portrait of a smiling male candidate in his late 20s, with a subtle Islamic geometric pattern overlay."
+                className="rounded-xl shadow-lg w-full h-auto object-cover aspect-[4/5] transition-all duration-300 group-hover:scale-105 group-hover:shadow-2xl group-hover:shadow-primary/50"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfFObrIg8DyhclLE6zfyClKqrcciMZotB5gMj3a-mWbUlGGb92wccIOrrR4HSMWxYxE__dtY2jowUDfWByaJJYrMj9uT2CTnXIIqGD6LZjWY3HeiEY2xD1gLZzvnbrvgr2lWdzLDH2iRtebbGCNvgrgQk6Z7vvWeAtcspfUbAWF5uMm9-mZ8_ghU79Dk5MAAxNm0Ia8LPAdClPhvQQRREfaGImjx9LYvEGUrNhgthIFbkw5C5E0NB_wMMTdrK7YyGxKoZ8Fxj0Nrui"
+              />
+              <div
+                className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 rounded-b-xl transition-opacity duration-300 group-hover:opacity-0"
+              >
+                <p className="text-white text-lg italic leading-tight">
+                  "For a future built on faith, community, and progress."
+                </p>
+              </div>
+            </div>
+            <div className="w-full md:w-1/2 text-center md:text-left">
+              <h2
+                className="text-3xl md:text-4xl font-bold text-text-light dark:text-text-dark mb-4"
+              >
+                Meet Your Candidate
+              </h2>
+              <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
+                A passionate advocate for progress, dedicated to serving our
+                community with integrity and a fresh perspective. Our candidate
+                is ready to lead us toward a brighter future.
+              </p>
+              <button
+                className="flex min-w-[84px] mx-auto md:mx-0 max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-5 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] w-fit"
+              >
+                <span className="truncate">Discover My Story</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="border-t border-gray-200 dark:border-gray-700 pt-10 pb-4">
+        <h2
+          className="text-text-light dark:text-text-dark text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3"
+        >
+          Our Policies
+        </h2>
+        <div className="px-4 flex flex-col gap-4">
+          <div
+            className="border border-gray-200 dark:border-gray-700 rounded-lg p-4"
+          >
+            <h3 className="font-bold text-lg text-primary">Education for All</h3>
+            <p className="text-gray-600 dark:text-gray-300 mt-1">
+              We will work to ensure every child has access to quality
+              education, from early childhood to higher learning.
+            </p>
+          </div>
+          <div
+            className="border border-gray-200 dark:border-gray-700 rounded-lg p-4"
+          >
+            <h3 className="font-bold text-lg text-primary">Healthcare Reform</h3>
+            <p className="text-gray-600 dark:text-gray-300 mt-1">
+              Affordable and accessible healthcare is a right, not a privilege.
+              We will expand coverage and lower costs.
+            </p>
+          </div>
+          <div
+            className="border border-gray-200 dark:border-gray-700 rounded-lg p-4"
+          >
+            <h3 className="font-bold text-lg text-primary">
+              Environmental Protection
+            </h3>
+            <p className="text-gray-600 dark:text-gray-300 mt-1">
+              We will take bold action to combat climate change and protect our
+              natural resources for future generations.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="border-t border-gray-200 dark:border-gray-700 pt-10">
+        <h2
+          className="text-text-light dark:text-text-dark text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3"
+        >
+          Upcoming Events
+        </h2>
+        <div
+          className="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        >
+          <div className="flex items-stretch p-4 gap-4">
+            <div
+              className="flex h-full flex-1 flex-col gap-4 rounded-xl bg-background-light dark:bg-background-dark/80 shadow-[0_0_4px_rgba(0,0,0,0.1)] min-w-64 border border-gray-200 dark:border-gray-700"
+            >
+              <div
+                className="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-t-xl flex flex-col"
+                data-alt="Town hall meeting with community members"
+                style={{
+                  backgroundImage: `url('https://lh3.googleusercontent.com/aida-public/AB6AXuAa-Nkf9MqLCM3u5Pp9D2uY5AZ0HeGuI3-OxUH0AbPEwI1S5KYBl75vKgpGDnclDyJRDmaxHkaLia2tMYa9l_J1RVHbwvcd8XnRu11s4ypRti3sgl4Lnip7DNqMIeyeoyK3w_jm7asU9b_UKH4b2rwsb7X7b6ksitmc5J8RhENMtZlRDFtMeEeKEVRjS_YCkTUrS1CZf8eQsrtrMf1tyKa7uk_gjx24logkPF-g3w1aiJj9BnoCnLJQkbzuTf79CTNA5-QyLLiQMFkr')`,
+                }}
+              ></div>
+              <div className="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
+                <div>
+                  <p
+                    className="text-text-light dark:text-text-dark text-base font-bold leading-normal"
+                  >
+                    Town Hall Meeting
+                  </p>
+                  <p
+                    className="text-gray-600 dark:text-gray-300 text-sm font-normal leading-normal"
+                  >
+                    Join us for a discussion on the future of our city. (Sat,
+                    Oct 26, 7:00 PM)
+                  </p>
+                </div>
+                <button
+                  className="flex min-w-[84px] w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/20 dark:bg-primary/30 text-primary font-bold leading-normal tracking-[0.015em] text-sm"
+                >
+                  <span className="truncate">Register</span>
+                </button>
+              </div>
+            </div>
+            <div
+              className="flex h-full flex-1 flex-col gap-4 rounded-xl bg-background-light dark:bg-background-dark/80 shadow-[0_0_4px_rgba(0,0,0,0.1)] min-w-64 border border-gray-200 dark:border-gray-700"
+            >
+              <div
+                className="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-t-xl flex flex-col"
+                data-alt="Rally for change with many supporters"
+                style={{
+                  backgroundImage: `url('https://lh3.googleusercontent.com/aida-public/AB6AXuCS6H01LGDGLhHIuTMiSktwL8GqMDTLBZye-F9w49sJE9WfBexIG5gcbc1ItvGq3vMAqg8IQJqAZvOYQG5sHTQmeHVZRFHBZu1a13a1E_oTyDvYxvvCrppoARXz72eo-cpPcmDHLlzJzfcZsUYjSshq22DDwRKY5tmY_rAjllsAt-MHBr_ua-VH8JrN95HUpav-0hlDs1pdlH9Pp8O2Ug27J87o3DKvlrHoYIxxn3BMKqyT-764rTxyvP17lsqB3sSWadnGf0aoygwT')`,
+                }}
+              ></div>
+              <div className="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
+                <div>
+                  <p
+                    className="text-text-light dark:text-text-dark text-base font-bold leading-normal"
+                  >
+                    Rally for Change
+                  </p>
+                  <p
+                    className="text-gray-600 dark:text-gray-300 text-sm font-normal leading-normal"
+                  >
+                    Show your support and hear our vision for a better tomorrow.
+                    (Wed, Oct 30, 6:00 PM)
+                  </p>
+                </div>
+                <button
+                  className="flex min-w-[84px] w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/20 dark:bg-primary/30 text-primary font-bold leading-normal tracking-[0.015em] text-sm"
+                >
+                  <span className="truncate">Register</span>
+                </button>
+              </div>
+            </div>
+            <div
+              className="flex h-full flex-1 flex-col gap-4 rounded-xl bg-background-light dark:bg-background-dark/80 shadow-[0_0_4px_rgba(0,0,0,0.1)] min-w-64 border border-gray-200 dark:border-gray-700"
+            >
+              <div
+                className="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-t-xl flex flex-col"
+                data-alt="Community BBQ with diverse group of people"
+                style={{
+                  backgroundImage: `url('https://lh3.googleusercontent.com/aida-public/AB6AXuA50yWxvIvGRtAf5IXjzme6ulNYr6R5YwU8l3s2qmSKb2wg3yeT9z2fuxmUUdAQdUbHzMGGJPEojyadF7cVw40XDMlAQLEcuW_XaWJQLqk5h_QOyruce4TpZf1kSPw7y_iChoOnlwLfsclDM07XQnM_FQ7EEdFOpC_-IzBZl1_O9DOcSnU2y-y20_hZ6Ph8uiGoifI-QhnUwKBmxhz_M-4pOzEV_O6d3OluvuCwUDKvHU_hPfXuPc065CEFRX5M0aTjhnQ3UIo1Gnth')`,
+                }}
+              ></div>
+              <div className="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
+                <div>
+                  <p
+                    className="text-text-light dark:text-text-dark text-base font-bold leading-normal"
+                  >
+                    Community BBQ
+                  </p>
+                  <p
+                    className="text-gray-600 dark:text-gray-300 text-sm font-normal leading-normal"
+                  >
+                    Let's connect over great food and conversation. (Sat, Nov 2,
+                    12:00 PM)
+                  </p>
+                </div>
+                <button
+                  className="flex min-w-[84px] w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/20 dark:bg-primary/30 text-primary font-bold leading-normal tracking-[0.015em] text-sm"
+                >
+                  <span className="truncate">Register</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        className="px-4 py-10 bg-background-light dark:bg-background-dark border-t border-gray-200 dark:border-gray-700 mt-10"
+      >
+        <div
+          className="bg-primary/10 dark:bg-primary/20 p-8 rounded-xl flex flex-col items-center gap-6 text-center"
+        >
+          <h2 className="text-text-light dark:text-text-dark text-2xl font-bold">
+            Get Involved
+          </h2>
+          <p className="text-gray-700 dark:text-gray-300 max-w-md">
+            Be part of the change. Sign up for our newsletter to stay updated or
+            volunteer to make a direct impact.
+          </p>
+          <form className="w-full max-w-sm flex flex-col gap-4">
+            <input
+              className="w-full h-12 px-4 rounded-lg border-gray-300 dark:border-gray-600 bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark focus:ring-primary focus:border-primary"
+              placeholder="Enter your email"
+              type="email"
+            />
+            <button
+              className="w-full h-12 rounded-lg bg-primary text-white font-bold tracking-wide"
+              type="submit"
+            >
+              Subscribe
+            </button>
+            <button
+              className="w-full h-12 rounded-lg bg-accent text-text-light font-bold tracking-wide"
+              type="button"
+            >
+              Volunteer
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <footer
+        className="bg-background-light dark:bg-background-dark border-t border-gray-200 dark:border-gray-700 mt-10"
+      >
+        <div className="container mx-auto px-4 py-8">
+          <div
+            className="flex flex-col md:flex-row justify-between items-center gap-6"
+          >
+            <p className="text-sm text-gray-600 dark:text-gray-400">
+              © 2024 Candidate Name. All rights reserved.
+            </p>
+            <div className="flex gap-4">
+              <a
+                className="text-gray-600 dark:text-gray-400 hover:text-primary"
+                href="#"
+              >
+                Facebook</a
+              >
+              <a
+                className="text-gray-600 dark:text-gray-400 hover:text-primary"
+                href="#"
+              >
+                Twitter</a
+              >
+              <a
+                className="text-gray-600 dark:text-gray-400 hover:text-primary"
+                href="#"
+              >
+                Instagram</a
+              >
+            </div>
+            <a
+              className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary"
+              href="#"
+            >
+              Privacy Policy</a
+            >
+          </div>
+        </div>
+      </footer>
+    </div>
   );
 }
