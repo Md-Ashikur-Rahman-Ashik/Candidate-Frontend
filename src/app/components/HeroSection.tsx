@@ -8,7 +8,7 @@ const HeroSection: React.FC = () => {
             <div className="absolute inset-0 z-0">
 
                 <Image
-                    src="/images/hero-background.jpg"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqMXR2pnaOEH_g6y8MNYHNGsY7EhU38rZ9cK2sNK9eOeC-BcnbAwQTAzlbVoXmSF1-K_h7tWzNRgFldHWtkc1-NraKrJZiAbVAObR6SzBjOhjIGRtY0ApesujdfzXhJbYhaCtYieVggWdRdi_QlBFvPWPQHT-lqa06su6W0wi33t4ajmbv82LKyo4QTe8EGfLamNqfsDylMHDT1quKsLO2BIHW2Tk_ROrk7ZzsW-sjW0cP8PVtfEEfQyBpal_qqUz6qrfh7GID32pC"
                     alt="A person in modest attire standing, representing a brighter future"
                     layout="fill"
                     objectFit="cover"
