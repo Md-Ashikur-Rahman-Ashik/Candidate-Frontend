@@ -1,17 +1,16 @@
-@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
+
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Material Symbols Icon */
-@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
 
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
 }
 
-
 body {
-    min-height: max(884px, 100dvh);
+  min-height: max(884px, 100dvh);
 }
