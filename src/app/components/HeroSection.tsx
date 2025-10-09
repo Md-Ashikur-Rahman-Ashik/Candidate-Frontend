@@ -3,20 +3,20 @@ import Image from 'next/image';
 
 const HeroSection: React.FC = () => {
     return (
-        <section className="relative w-full overflow-hidden rounded-lg px-4 py-16 md:py-20 lg:py-24 xl:py-28 mt-5">
-
+        <section className="relative w-full overflow-hidden rounded-lg mt-2 py-16 md:py-20 lg:py-24 xl:py-28">
             <div className="absolute inset-0 z-0">
+                <div className="absolute inset-0 h-full w-full">
+                    <Image
+                        src="https://i.ibb.co/MxkTRWBm/DemoImg.png"
+                        alt="A person in modest attire standing, representing a brighter future"
+                        fill
+                        priority
+                        className="object-cover object-center md:object-[center_30%]"
+                    />
+                </div>
 
-                <Image
-                    src="/images/DemoImg.png"
-                    alt="A person in modest attire standing, representing a brighter future"
-                    layout="fill"
-                    objectFit="cover"
-                    objectPosition="center 30%"
-                    priority
-                />
 
-                <div className="absolute inset-0 bg-[#1A4C4F] opacity-50"></div>
+                <div className="absolute inset-0 bg-[#1A4C4F] opacity-60"></div>
             </div>
 
 
