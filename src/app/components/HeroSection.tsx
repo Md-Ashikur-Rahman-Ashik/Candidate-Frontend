@@ -3,12 +3,12 @@ import Image from 'next/image';
 
 const HeroSection: React.FC = () => {
     return (
-        <section className="relative w-full overflow-hidden rounded-lg px-4 py-16 md:py-20 lg:py-24 xl:py-28">
+        <section className="relative w-full overflow-hidden rounded-lg px-4 py-16 md:py-20 lg:py-24 xl:py-28 mt-5">
 
             <div className="absolute inset-0 z-0">
 
                 <Image
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqMXR2pnaOEH_g6y8MNYHNGsY7EhU38rZ9cK2sNK9eOeC-BcnbAwQTAzlbVoXmSF1-K_h7tWzNRgFldHWtkc1-NraKrJZiAbVAObR6SzBjOhjIGRtY0ApesujdfzXhJbYhaCtYieVggWdRdi_QlBFvPWPQHT-lqa06su6W0wi33t4ajmbv82LKyo4QTe8EGfLamNqfsDylMHDT1quKsLO2BIHW2Tk_ROrk7ZzsW-sjW0cP8PVtfEEfQyBpal_qqUz6qrfh7GID32pC"
+                    src="/images/DemoImg.png"
                     alt="A person in modest attire standing, representing a brighter future"
                     layout="fill"
                     objectFit="cover"
@@ -16,7 +16,7 @@ const HeroSection: React.FC = () => {
                     priority
                 />
 
-                <div className="absolute inset-0 bg-[#1A4C4F] opacity-90"></div>
+                <div className="absolute inset-0 bg-[#1A4C4F] opacity-50"></div>
             </div>
 
 
