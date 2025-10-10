@@ -1,7 +1,6 @@
 export interface ProfileData {
   title: string;
   description: string;
-  buttonText: string;
   buttonLink: string;
   imageUrl: string;
   imageAlt: string;
@@ -9,11 +8,10 @@ export interface ProfileData {
 
 
 export const candidateData: ProfileData = {
-  title: "Meet Your Candidate",
+  title: "প্রার্থীর পরিচিতি",
   description:
-    "A passionate advocate for progress, dedicated to serving our community with integrity and a fresh perspective. Our candidate is ready to lead us toward a brighter future.",
-  buttonText: "Discover My Story",
+    "কাজী দিন মোহাম্মদ একজন সমাজসেবক ও ইসলামী মূল্যবোধে অনুপ্রাণিত নেতা। যিনি ন্যায়, সেবা ও মানবিক উন্নয়নকে তাঁর রাজনৈতিক দর্শনের কেন্দ্রবিন্দুতে রেখেছেন।",
   buttonLink: "#about",
-  imageUrl: "https://i.ibb.co/dsTpsq62/Demo-Candidate.png",
+  imageUrl: "https://i.ibb.co/bVZRWV7/Candidate-Image.png",
   imageAlt: "A portrait of the candidate",
 };

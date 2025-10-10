@@ -10,7 +10,7 @@ interface CandidateProfileProps {
 }
 
 const CandidateProfile: React.FC<CandidateProfileProps> = ({ data }) => {
-    const { title, description, buttonText, buttonLink, imageUrl, imageAlt } = data;
+    const { title, description, buttonLink, imageUrl, imageAlt } = data;
 
     return (
         <section className="bg-white py-12 lg:py-24">
@@ -38,11 +38,11 @@ const CandidateProfile: React.FC<CandidateProfileProps> = ({ data }) => {
                             {description}
                         </p>
 
-                        <Link
+                        {/* <Link
                             href={buttonLink}
                             className="inline-block bg-green-600 text-white font-semibold py-3 px-8 rounded-full text-lg transition-transform duration-300 ease-in-out hover:bg-green-700 hover:scale-105 shadow-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2">
                             {buttonText}
-                        </Link>
+                        </Link> */}
                     </div>
                 </div>
             </div>
