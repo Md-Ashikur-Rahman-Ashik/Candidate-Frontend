@@ -6,6 +6,7 @@ import CandidateProfile from "./components/CandidateProfile";
 import { candidateData } from "@/types/profile";
 import Policies, { policiesData } from "./components/Policies";
 import UpcomingEvents, { MOCK_EVENTS } from "./components/UpcomingEvents";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <CandidateProfile data={candidateData} />
       <Policies policies={policiesData} />
       <UpcomingEvents events={MOCK_EVENTS} />
+      <Footer />
     </div>
   );
 }
