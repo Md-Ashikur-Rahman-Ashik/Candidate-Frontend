@@ -27,7 +27,7 @@ const HeroSection: React.FC = () => {
                 <p className="mb-8 max-w-2xl text-base md:text-lg lg:text-xl">
                     ন্যায়, সেবা ও উন্নয়নের প্রতিশ্রুতি
                 </p>
-                <button className="flex gap-2 rounded-full bg-[#F5B301] px-8 py-3 font-semibold text-black shadow-lg transition-colors duration-300 hover:bg-[#E0A000] md:px-10 md:py-4">
+                <button className="flex gap-2 rounded-full bg-green-500 px-8 py-3 font-semibold text-yellow-100 shadow-lg transition-colors duration-300 hover:bg-[#E0A000] md:px-10 md:py-4">
                     <span>কল্যাণ রাষ্ট্র</span>
                     دولة الرفاهية
                 </button>
