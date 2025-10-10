@@ -5,6 +5,7 @@ import FeatureCards from "./components/ThreeCard";
 import CandidateProfile from "./components/CandidateProfile";
 import { candidateData } from "@/types/profile";
 import Policies, { policiesData } from "./components/Policies";
+import UpcomingEvents, { MOCK_EVENTS } from "./components/UpcomingEvents";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <FeatureCards />
       <CandidateProfile data={candidateData} />
       <Policies policies={policiesData} />
+      <UpcomingEvents events={MOCK_EVENTS} />
     </div>
   );
 }
